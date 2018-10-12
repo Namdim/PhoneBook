@@ -11,9 +11,14 @@ public class PhoneBook {
 
         addStartDataPhoneBook();
     }
+
     public void printContact(String fio){
-        System.out.print( contacts.get(fio) );
-        System.out.println();
+        if(contacts.get(fio) != null) {
+            System.out.print(contacts.get(fio));
+            System.out.println();
+        }else {
+            System.out.println(fio+" doesn't exist in database");
+        }
     }
 
     private void addStartDataPhoneBook(){
